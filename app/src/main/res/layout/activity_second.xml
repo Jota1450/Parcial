@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Idioma"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        android:layout_marginBottom="15dp"
+        android:text="Nombre de Pelicula"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="8dp"
+        android:text="Genero"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerGenero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupIdioma" />
+
+    <TextView
+        android:id="@+id/textViewIdioma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Idioma"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupIdioma"
+        app:layout_constraintEnd_toEndOf="@+id/lbDirector"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lbDirector"
+        app:layout_constraintTop_toBottomOf="@+id/lbDirector" />
+
+    <TextView
+        android:id="@+id/textViewDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="9dp"
+        android:text="Director"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lbDirector"
+        app:layout_constraintEnd_toEndOf="@+id/lbNombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lbNombre"
+        app:layout_constraintTop_toBottomOf="@+id/lbNombre" />
+
+    <EditText
+        android:id="@+id/lbNombre"
+        android:layout_width="259dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDirector"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNombre"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="@+id/textViewNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
+
+    <EditText
+        android:id="@+id/lbDirector"
+        android:layout_width="259dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textViewIdioma"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDirector"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDirector"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDirector" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupIdioma"
+        android:layout_width="255dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIdioma">
+
+        <RadioButton
+            android:id="@+id/rbIngles"
+            android:layout_marginTop="10dp"
+            android:text="Ingles"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rbEspanol"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Español"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerGenero"
+        android:layout_width="291dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewGenero"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="@+id/textViewGenero"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGenero" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Cancelar"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerGenero"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="@+id/spinnerGenero"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGenero"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:text="Guardar"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCancelar"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+        app:layout_constraintTop_toTopOf="@+id/btnCancelar"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
